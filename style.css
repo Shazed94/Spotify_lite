@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-green: rgb(1, 179, 60);
+  --primary-white: cornsilk;
+}
+
+html {
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body {
+  background: linear-gradient(to bottom, #c94b4b, #4b134f);
+}
+
+.container {
+  height: 100vh;
+}
+
+.left-side {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 35%;
+  height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.45) 25px 0px 20px -20px;
+  overflow: hidden;
+}
+
+.left-side img {
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgb(245 228 228);
+  margin-bottom: 1.5rem;
+}
+
+.playlist-logo {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.playlist-name {
+  font-weight: bold;
+  font-family: 'Lucida Sans Unicode';
+  margin-bottom: 0.2rem;
+}
+
+.song-count {
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  font-family:'Segoe UI', sans-serif;
+  border-top: 2px solid rgb(196, 175, 253);
+  padding: 4px 2px;
+}
+
+.now-playing {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.now-playing h2 {
+  font-size: 2.2rem;
+  letter-spacing: 4px;
+  font-family: 'Segoe UI', sans-serif;
+  margin-bottom: 15px;
+  color: #fff;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  text-shadow: 3px 1px 4px #7a7a7a,
+    2px 2px 0px rgb(86 39 206 / 20%);
+}
+
+.now-playing h3 {
+  font-size: 1.3rem;
+  color: rgb(3, 179, 67);
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.buttons {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+  display: flex;
+  border: none;
+}
+
+.buttons .btn-prev,
+.buttons .btn-next {
+  font-size: 1.5rem;
+  color: #fff;
+  background: none;
+  border: none;
+  margin: 0 20px;
+}
+
+.buttons .btn-prev:hover,
+.buttons .btn-next:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.buttons .btn-trigger {
+  color: rgb(255, 255, 255);
+  background: #1ed760;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease;
+}
+
+.buttons .btn-trigger:hover {
+  color: #fff;
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+.track-bar {
+  width: 75%;
+  height: 5px;
+  background: rgb(5, 4, 4);
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  /* overflow: hidden; */
+}
+
+.track-bar__fill {
+  width: 0%;
+  height: 5px;
+  background-color: #33b75c;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  /* overflow: hidden; */
+}
+
+.right-side {
+  width: 65%;
+  float: right;
+  height: 100vh;
+  overflow: auto;
+}
+
+.songlist ul {
+  list-style-type: none;
+}
+
+.song-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.song-info .play-pause i {
+  position: inherit;
+  display: initial;
+  padding: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+.fa-play1 {
+  background-color: rgba(34, 34, 34, 0.446);
+}
+
+.song-info.fa-play1 .play-pause i,
+.song-info.fa-play1 .song-duration {
+  color: #1ed760;
+}
+
+/* .song-info.fa-play1 .song-duration {
+  color: #1ed760;
+} */
+
+.song-info h3 {
+  font-size: 1.2rem;
+  margin: 0 5px;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.song-info h5 {
+  font-size: 0.8rem;
+  margin: 0 5px;
+  text-transform: capitalize;
+  color: #eee;
+}
+
+.song-info:hover {
+  background-color: rgba(34, 34, 34, 0.446);
+}
+
+/* .fa-play1 {
+  color: rgb(0, 167, 0) !important;
+  background-color: rgba(34, 34, 34, 0.446);
+} */
+
+.song-details {
+  display: flex;
+  align-items: center;
+}
+
+.song-details h3,
+h5 {
+  color: #fff;
+}
+
+.song-info .song-duration {
+  position: absolute;
+  right: 2%;
+  color: rgb(189, 189, 189);
+}
